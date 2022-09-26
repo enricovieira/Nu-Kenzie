@@ -1,0 +1,31 @@
+.filter__btn {
+  width: max-content;
+  padding: 10px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--grey-1);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.filter__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.filter__span {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 769px) {
+  .filter__container {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,46 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid var(--grey-2);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+input {
+  border: 1px solid var(--grey-2);
+  border-radius: 4px;
+  padding: 4px;
+  width: max-content;
+}
+
+.form__example {
+  color: var(--grey-3);
+  font-size: 0.8rem;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+select {
+  border: 1px solid var(--grey-2);
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  form {
+    gap: 20px;
+  }
+
+  .form__container {
+    flex-direction: row;
+    min-width: 400px;
+  }
+}

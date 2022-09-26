@@ -1,0 +1,15 @@
+.description__container {
+  height: 100%;
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.description__container h2 {
+  font-size: 1.4rem;
+}
+
+.description__container span {
+  font-size: 1rem;
+}

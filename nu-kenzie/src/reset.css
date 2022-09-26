@@ -1,0 +1,24 @@
+h1,
+button,
+img,
+span,
+h2,
+ul,
+h3 {
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --primary: #fd377e;
+  --primary-2: #e064cc;
+  --secundary: #03b898;
+
+  --grey-1: #f8f9fa;
+  --grey-2: #e9ecef;
+  --grey-3: #868e96;
+  --grey-4: #212529;
+}

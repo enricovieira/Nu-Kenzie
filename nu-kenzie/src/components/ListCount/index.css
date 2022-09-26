@@ -1,0 +1,18 @@
+.total__container {
+  border: 2px solid var(--grey-2);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.total__h3 {
+  font-size: 1rem;
+}
+
+.total__price {
+  color: var(--primary);
+}
+
+.total__span {
+  font-size: 0.8rem;
+  color: var(--grey-4);
+}
