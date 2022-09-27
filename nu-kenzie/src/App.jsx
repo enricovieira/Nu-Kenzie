@@ -19,7 +19,7 @@ function App() {
   }
 
   function removeItem(itemSelected) {
-    const newList = isListFinancial.filter((item) => item !== itemSelected);
+    const newList = isListFinancial.filter((item, index) => index !== itemSelected);
     setIsListFinancial(newList);
   }
 
