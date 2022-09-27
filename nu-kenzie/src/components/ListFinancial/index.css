@@ -3,11 +3,22 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-height: 390px;
+  overflow-y: auto;
 }
 
 .card {
   border: 1px solid var(--grey-2);
   border-left: 3px solid var(--secundary);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__expense {
+  border: 1px solid var(--grey-2);
+  border-left: 3px solid var(--grey-2);
   padding: 10px 15px;
   border-radius: 10px;
   display: flex;

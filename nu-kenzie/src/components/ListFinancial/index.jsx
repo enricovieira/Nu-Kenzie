@@ -7,18 +7,43 @@ function FinancialList({ financialResume, removeItem }) {
   return (
     <ul>
       {financialResume.length ? (
-        financialResume.map((item, index) => (
-          <li className="card" key={index}>
-            <div className="card__info">
-              <h3 className="card__name">{item.description}</h3>
-              <span className="card__type">{item.type}</span>
-            </div>
-            <div className="card__value">
-              <span>{`R$ ${item.value}`}</span>
-              <img onClick={()=>{removeItem(item)}} src={buttonTrash} alt="Botão para deletar" />
-            </div>
-          </li>
-        ))
+        financialResume.map((item, index) =>
+          item.type === "Saída" ? (
+            <li className="card__expense" key={index}>
+              <div className="card__info">
+                <h3 className="card__name">{item.description}</h3>
+                <span className="card__type">{item.type}</span>
+              </div>
+              <div className="card__value">
+                <span>{`R$ ${item.value}`}</span>
+                <img
+                  onClick={() => {
+                    removeItem(index);
+                  }}
+                  src={buttonTrash}
+                  alt="Botão para deletar"
+                />
+              </div>
+            </li>
+          ) : (
+            <li className="card" key={index}>
+              <div className="card__info">
+                <h3 className="card__name">{item.description}</h3>
+                <span className="card__type">{item.type}</span>
+              </div>
+              <div className="card__value">
+                <span>{`R$ ${item.value}`}</span>
+                <img
+                  onClick={() => {
+                    removeItem(index);
+                  }}
+                  src={buttonTrash}
+                  alt="Botão para deletar"
+                />
+              </div>
+            </li>
+          )
+        )
       ) : (
         <div className="list__empty">
           <h2>Você ainda não possui nenhum lançamento</h2>
