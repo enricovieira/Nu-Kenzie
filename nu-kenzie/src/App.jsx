@@ -10,17 +10,20 @@ import TotalValue from "./components/ListCount";
 function App() {
   const [isMenu, setIsMenu] = useState(true);
 
-  const [isListFinancial, setIsListFinancial] = useState([
-    
-  ]);
+  const [isListFinancial, setIsListFinancial] = useState([]);
+
+  const [isFilter, setIsFilter] = useState([]);
 
   function addItem(formData) {
     setIsListFinancial([...isListFinancial, formData]);
   }
 
   function removeItem(itemSelected) {
-    const newList = isListFinancial.filter((item, index) => index !== itemSelected);
+    const newList = isListFinancial.filter(
+      (item, index) => index !== itemSelected
+    );
     setIsListFinancial(newList);
+    setIsFilter(newList);
   }
 
   return (
@@ -58,13 +61,17 @@ function App() {
           <div className="dashboard__container">
             <section className="form__section">
               <CreateFormValue addItem={addItem} />
-              <TotalValue list={isListFinancial}/>
+              <TotalValue list={isListFinancial} />
             </section>
             <section className="list__section">
-              <FilterNav />
+              <FilterNav
+                isListFinancial={isListFinancial}
+                setIsFilter={setIsFilter}
+              />
               <FinancialList
                 financialResume={isListFinancial}
                 removeItem={removeItem}
+                isFilter={isFilter}
               />
             </section>
           </div>

@@ -3,11 +3,12 @@ import emptyList from "../../assets/emptyList.svg";
 import "./index.css";
 import buttonTrash from "../../assets/buttonTrash.svg";
 
-function FinancialList({ financialResume, removeItem }) {
+function FinancialList({ financialResume, removeItem, isFilter }) {
+  const lists = isFilter.length ? isFilter : financialResume;
   return (
     <ul>
       {financialResume.length ? (
-        financialResume.map((item, index) =>
+        lists.map((item, index) =>
           item.type === "Saída" ? (
             <li className="card__expense" key={index}>
               <div className="card__info">
